@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JavaScript
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- fontawesome, -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="tabs vh-100">
+            <div class="container py-5">
+                <div class="row w-lg-75 m-auto row_shadow">
+                    <div class="col p-0">
+                        <div class="d-lg-flex align-items-start">
+                            <div class="col_left nav flex-column nav-pills me-lg-3 px-lg-5 py-lg-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Bài 1</button>
+                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Bài 2</button>
+                                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Bài 3</button>
+                                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bài 4</button>
+                                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bài 5</button>
+                            </div>
+                            <div class="tab-content px-lg-4 py-lg-4" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                                    <h2><i class="fa-solid fa-circle-dollar-to-slot"></i> TÍnh tiền lương của nhân viên</h2>
+                                    <div class="row d-flex align-items-center gap-3 mt-4">
+                                        <div class="col-12 col-lg-4 p-0">
+                                            <input type="number" name="" id="Num1" placeholder="Nhập lương 1 ngày">
+                                        </div>
+                                        <div class="col-12 col-lg-4 p-0">
+                                            <input type="number" name="" id="Num2" placeholder="Nhập số ngày làm">
+                                        </div>
+                                        <div class="col-12 me-1 mb-1 p-0">
+                                            <button class="btn btn-primary" id="btn_salary" onclick="bai1()">Tính lương</button>
+                                        </div>
+                                        <div class="result p-3 rounded-1 d-flex align-items-center">
+                                            <i class="fa-solid fa-hand-point-right me-2"></i>
+                                            <span id="result1">
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                    <h2><i class="fa-solid fa-calculator"></i> TÍnh giá trị trung bình</h2>
+                                    <div class="row d-flex align-items-center mt-4">
+                                        <div class="col-12 col-lg-4">
+                                            <input type="number" name="" id="Num1_2" placeholder="Nhập số thứ 1">
+                                        </div>
+                                        <div class="col-12 col-lg-4">
+                                            <input type="number" name="" id="Num2_2" placeholder="Nhập số thứ 2">
+                                        </div>
+                                        <div class="col-12 col-lg-4">
+                                            <input type="number" name="" id="Num3_2" placeholder="Nhập số thứ 3">
+                                        </div>
+                                        <div class="col-12 col-lg-4">
+                                            <input type="number" name="" id="Num4_2" placeholder="Nhập số thứ 4">
+                                        </div>
+                                        <div class="col-12 col-lg-4">
+                                            <input type="number" name="" id="Num5_2" placeholder="Nhập số thứ 5">
+                                        </div>
+                                        <div class="col-12 me-1 mb-3 mt-3">
+                                            <button class="btn btn-primary" id="btn_tb" onclick="bai2()">Tính trung bình</button>
+                                        </div>
+                                        <div class="result p-3 rounded-1 d-flex align-items-center">
+                                            <i class="fa-solid fa-hand-point-right me-2"></i>
+                                            <span id="result2">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                                    <h2><i class="fa-solid fa-arrows-rotate"></i> Quy đổi tiền</h2>
+                                    <div class="row d-flex align-items-center gap-3 mt-4">
+                                        <div class="col-12 col-lg-6 p-0">
+                                            <input type="number" name="" id="Num1_3" placeholder="Nhập số tiền USD">
+                                        </div>
+                                        <div class="col-12 me-1 mb-1 p-0">
+                                            <button class="btn btn-primary" id="btn_usd" onclick="bai3()">Quy đổi tiền</button>
+                                        </div>
+                                        <div class="result p-3 rounded-1 d-flex align-items-center">
+                                            <i class="fa-solid fa-hand-point-right me-2"></i>
+                                            <span id="result3">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+                                    <h2><i class="fa-solid fa-ruler-combined"></i> TÍnh diên tích, chu vi hình chữ nhật</h2>
+                                    <div class="row d-flex align-items-center gap-3 mt-4">
+                                        <div class="col-12 col-lg-4 p-0">
+                                            <input type="number" name="" id="Num1_4" placeholder="Nhập chiều dài">
+                                        </div>
+                                        <div class="col-12 col-lg-4 p-0">
+                                            <input type="number" name="" id="Num2_4" placeholder="Nhập chiều rộng">
+                                        </div>
+                                        <div class="col-12 me-1 mb-1 p-0">
+                                            <button class="btn btn-primary" id="btn_dt" onclick="bai4()">Tính</button>
+                                        </div>
+                                        <div class="result p-3 rounded-1 d-flex align-items-center">
+                                            <i class="fa-solid fa-hand-point-right me-2"></i>
+                                            <span id="result4">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+                                    <h2><i class="fa-solid fa-ruler-combined"></i> TÍnh tổng 2 ký số</h2>
+                                    <div class="row d-flex align-items-center gap-3 mt-4">
+                                        <div class="col-12 col-lg-6 p-0">
+                                            <input type="number" name="" id="Num1_5" placeholder="Nhập số có 2 chữ số">
+                                        </div>
+                                        <div class="col-12 me-1 mb-1 p-0">
+                                            <button class="btn btn-primary" id="btn_ky_so" onclick="bai5()">Tính</button>
+                                        </div>
+                                        <div class="result p-3 rounded-1 d-flex align-items-center">
+                                            <i class="fa-solid fa-hand-point-right me-2"></i>
+                                            <span id="result5">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
